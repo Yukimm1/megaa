@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "WristLink Wear",
+    "slug": "wristlink-wear",
+    "version": "1.0.0",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.smarth.wristlink.expo",
+      "permissions": ["INTERNET"]
+    },
+    "plugins": [
+      [
+        "react-native-ble-manager",
+        {
+          "neverForLocation": true,
+          "isBleRequired": false,
+          "companionDeviceEnabled": false
+        }
+      ],
+      "./plugins/withWearOs"
+    ],
+    "extra": {
+      "serverUrl": "ws://10.0.2.2:3000/ws?role=watch"
+    }
+  }
+}
